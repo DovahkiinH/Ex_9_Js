@@ -1,32 +1,47 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ex9 Javascript</title>
 </head>
 <body>
+
+    <img class="papillon" src = "pas/d'image" id="papillon" alt="papillon">
+
+    <p id="cube"></p>
+
+    <p id="produit"></p>
+
     <script>
 
-function afficheImg(image)
+function afficheImg()
 {
 
-    
+    var i = document.getElementById("papillon");
+    i.setAttribute("src", "Assets/papillon.jpg");
 
 }
 
 function produit(x,y)
 {
+
     var x = window.prompt("entrez un nombre");
     var y = window.prompt("entrez un multiplicateur");
     var resultat = x * y ;
+    var resultatCube = x * x * x;
+    document.getElementById("produit").innerHTML = " Le produit de "+ x +"x"+ y + " est égal à :" + resultat;
+    document.getElementById("cube").innerHTML = " Le cube de "+ x + " est égal à :" + resultatCube;
 
 }
 
+afficheImg();
+
 produit();
-return resultat; 
 
     </script>
+
+
 
 </body>
 </html>
